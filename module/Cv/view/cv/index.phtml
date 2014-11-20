@@ -1,0 +1,33 @@
+<article id="curriculum_vitae">
+	<section id="vita_details" >
+		<h2 id="cv_help">Please click one of the following boxes to get more information.</h2>
+		<div class="vita-container">
+			<h1>Curriculum Vitae</h1>
+			<div class="description">
+				<div id="vita_desc_box">
+					<h2>Description</h2>
+					<p></p>
+				</div>
+			</div>
+			<div id="gmap"></div>
+		</div>
+	</section>
+	<section id="timelines" >
+		<div class="timelines-container">
+			<?php foreach($vita as $timeLine) : ?>
+				<figure class="timeline-box" data-description="<?php echo $timeLine->getDesc(); ?>" data-latitude="<?php echo $timeLine->getLatitude(); ?>" data-longitude="<?php echo $timeLine->getLongitude(); ?>">
+					<a href="#" class="box">
+						<h3><?php echo $this->dateFormat($timeLine->getDate(), IntlDateFormatter::MEDIUM, IntlDateFormatter::NONE); ?></h3>
+						<p><?php echo $timeLine->getTitle(); ?></p>
+					</a>
+				</figure>
+			<?php endforeach; ?> 
+		</div>
+	</section>
+</article>
+<script type="text/javascript"
+  src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCX32qf_nMGew5v2k3cFYoSf2kAavzdoTE">
+</script>
+<script src="<?php echo $this->basePath(); ?>/js/cv.js"></script>
+<script src="<?php echo $this->basePath(); ?>/js/jquery.firefly.js"></script>
+<script src="<?php echo $this->basePath(); ?>/js/initFlies.js"></script>

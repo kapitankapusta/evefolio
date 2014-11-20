@@ -1,0 +1,43 @@
+.img-inline-desc {
+    transition: all 0.2s linear;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    .mask {
+        opacity: 0;
+        background-color: rgba(@brand-primary-r, @brand-primary-g, @brand-primary-b, 0.7);
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+        width: 100%;
+    }
+
+    h2 {
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        color: #fff;
+    }
+
+    p {
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.2s linear;
+        color: #fff;
+    }
+
+    &:hover {
+        .mask {
+            opacity: 1;
+        }
+
+        h2, p {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        p {
+            transition-delay: 0.1s;
+        }
+    }
+}

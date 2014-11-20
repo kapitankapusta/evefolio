@@ -1,0 +1,31 @@
+<article id="work_and_technos">
+    <?php foreach ($technos as $technology): ?>
+        <section class="row-fluid techno-section">
+            <div class="container">
+                <div class="techno-icon">
+                    <img 
+                        class="img-responsive" 
+                        src="<?php echo $this->basePath() . '/img/work/' .$technology->getImageFileName(); ?>" 
+                        alt="<?php echo $technology->getTitle(); ?>"
+                    />
+                </div>
+                <div class="techno-info">
+                    <h2><span><?php echo $technology->getTitle(); ?></span></h2>
+                    <p><?php echo $technology->getDesc(); ?></p>
+                </div>
+            </div>
+        </section>
+        <section class="reference-section">
+            <div class="container">
+                <div class="reference-info">
+                    <div class="text">
+                        <?php foreach ($technology->getReferences() as $reference) : ?>
+                            <a href="<?php echo $reference->getWebpage(); ?>"><h2><?php echo $reference->getTitle(); ?><i class="icon icon-right-open"></i></h2></a>
+                            <p><?php echo $reference->getDesc(); ?></p>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endforeach ?>
+</article>

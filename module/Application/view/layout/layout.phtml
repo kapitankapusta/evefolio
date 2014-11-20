@@ -1,0 +1,72 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/main.css')
+                        ->prependStylesheet($this->basePath(). '/css/fontello.css');
+        ?>
+                 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default " role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <a class="navbar-brand" href="<?php echo $this->url('home') ?>">
+                        <svg width="50" height="50">
+                            <image xlink:href="<?php echo $this->basePath('img/logo.svg') ?>"src="<?php echo $this->basePath('img/logo.png') ?>" width="50" height="50" />
+                        </svg>
+                        <span id="logoPageName">
+                            Ka<span class="inner-color">pitanKa</span>pusta
+                        </span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <?php echo $this->navigation_helper(); ?>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="content">
+            <?php echo $this->content; ?>
+        </div>
+        <footer>
+            <figure id="footer_hr">
+                <svg width="25" height="25">
+                    <image xlink:href="<?php echo $this->basePath('img/logo.svg') ?>"src="<?php echo $this->basePath('img/logo.png') ?>" width="25" height="25" />
+                </svg>
+                <figure class="seperator"></figure>
+            </figure>
+            <div class="container">
+                <div class="row">
+                    <div class="footer-item">
+                        <span class="pull-right">©KapitanKapusta 2014</span>
+                        <span class="pull-right"><a href="<?php echo $this->url('legal'); ?>">Legal</a></span>
+                        <span class="pull-right"><a href="<?php echo $this->url('tos'); ?>">Terms of Service</a></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <?php 
+            // $this->requireJS('Bar');
+        ?>
+    </body>
+</html>

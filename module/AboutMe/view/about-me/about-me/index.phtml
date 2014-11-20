@@ -1,0 +1,131 @@
+<section id="about_me_container" class="container">
+    <div class="row">
+        <figure id="portraits_container">
+        <i class="icon icon-male"></i>
+            <figure id="portraits_box">
+                <div class="content">
+                    <figure class="img-border">
+                        <div class="portrait"></div>
+                    </figure>
+                    <h2>TL;DR</h2>
+                    <table class="table">
+                        <tr>
+                            <td>Age:</td>
+                            <td>
+                                <?php
+                                    $today = new DateTime('now'); 
+                                    $difference = $this->age->diff($today);
+                                    echo $difference->format('%y%'); //such php much cryptic WOW
+                                ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Born:</td>
+                            <td>
+                                <?php 
+                                echo $this->dateFormat($this->age, IntlDateFormatter::MEDIUM, IntlDateFormatter::NONE); ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Origin:</td>
+                            <td>Germany</td>
+                        </tr>
+                        <tr>
+                            <td>Job:</td>
+                            <td>Webdev (backend)</td>
+                        </tr>
+                        <tr>
+                            <td>everyday life:</td>
+                            <td>programming, coffe, games, books</td>
+                        </tr>
+                    </table>
+                </div>
+                <figure id="portraits_footer">
+                </figure>
+            </figure>
+        </figure>
+        <div id="text_box">
+            <div class="text">
+                <h1>
+                    About Me
+                </h1>
+                <p>
+                    Hi there,
+                    my name is Stanislaw (Vladimirovich) Gutsch. I was born and raised in a middle-sized town called Issyk in Kazakhstan during the winter of 1987.
+
+                    Once the Soviet Union fell apart, me and my family moved to the region Rhineland Palatinate in Germany.
+                </p>
+
+                <h2>Early Steps</h2>
+                <p>
+                    Even as a child computers have fascinated me, for example my cousin owned a computer and even let me play arround it while I still was pretty much a pre school kid. While I did not understand most of it I think this is where I started to take a interest in the IT field.
+
+                    My first computer I personally owned was obviously an older model from the 90's. Which has been given to me from a relative since he just upgraded and needed to get rid of it somehow. 
+                    I had just started the 5th grade(this is where they start teaching you english in Germany) so my ability to understand what MS DOS was telling me was kind of a problem at first. Trial and error got me trough a bit though.
+
+                    After a while I got a German windows3.5 installation from the same relative who handed me down his old computer. From there on I could actually understand what I was doing and got some fundamentals down pretty quickly.
+
+                    Years later I got my hands on a cable ADSL conection and a new computer which pretty much sealed the deal for me becoming something IT related.
+                </p>
+
+                <h2>Education</h2>
+                <p>
+                    So after the public school I attended college and earned a assistant letter in programming. Now I had the opportunity to enter directly into the workforce as an apprentice or study at a university level.
+
+                    Since my programming teacher advised me to apply to an uni, I did and got accapted fairly fast. Since the technical college was shorter than the normal Vocational career, I did not have the requirements to begin attend the university off the bat. University required me to work as a trainee for atleast half year. In addition my workfield had to to with programmer / system administrator or general work as IT.
+
+                    A startup called Noitulos in a neighbouring town took me. It was that first time I was allowed the work as a programmer so I was quite nervous about whether I would meet the requirements and perform well. But it quickly became apparent that I had no reason to worry whatsoever. The startup provided me with a nice working phase and some literature to get into webdevelopment.
+                </p>
+
+                <h2>Early Career</h2>
+                <p>
+                    Their technology of choice was a Python-based framework called Django. So I grabed the python book they had kindly provided me and started learning the syntax and functions of python in general. 
+                    Since I only had learned C/C++ during school I generally felt that there was a big difference between these 2 and struggled to get the differens of concepts at first. Not to mention the python feature that forces you to use intandation. Which drove me nuts in the begining. But I soon learned to love this feature, alot! Up until this day I try really hard to have clean intandation.
+                    Even after trainee time at noitulos we agreed to me working part time while attending university. Which lasted for a while until I chose to change majors to medical informatics and had to relocate.
+                </p>
+                <h2>University</h2>
+                <p>
+                    I chose to attend a course in theoretical informatics since I tought a broad understanding is what I wanted to aquire. Sadly I was missing practical work and having to repeat basic understanding which I already know of during my college times made this course a tard bit boring at times. Also secondary classes that focused on business and business comunication just weren't ment to mastered by me. On the otherhand I enjoyed the technical informatics and media informatics class alot. So I decided to switch major's and tried to get into a more practical course.
+
+                    I settled on medical informatics since their advertised their course as highly practical. Now me and the educational department of may have a diffrent understanding on the concept of something being "practical". The only tasks that I would call practical were the programming classes with their home assignments the rest was sitting arround looking at powerpoint presentations. Now I personally would not call this a "practical orientaded" major at all.
+
+                    Ofcourse im not trying to shift the blame here. I should've informed myself prior to attending the major. I should've talked to professors and students of the same major beforhand. Also maybe attend one of those open day events. But in the end I just burned out quit and moved on.
+                </p>
+                <h2>Stage building?!?</h2>
+                <p>
+                    Now I was in pretty bad spot, I had wasted years of my life without acomplishing anything. Student loans and rent doesn't pay for itself either. So I needed a job. Just any kind of job would've done for me at that time. One thing let to another and I ended up building stages for performers for a while. 
+
+                    Although the work was really hard, and irregular long. My day sometimes started at 4 am in the morning and ended at 2 am or 3 am at night. Non the less the work was fun, physically challanging and somewhat rewarding. Another huge bonus to building a stage for performes is that you get to see the concert show for free, too :)
+
+                    My absolute favorite stage and concert I could help build was Roger Waters of Pink Floyd with his show called the Wall. While our part of the wall didn't work during the gig it still was the most challenging and interesting thing I ever build. 
+
+                    It was supposed to be some sort of balcony in the wall and should flip open during a song where he would sit within a hotel room and perform. Unfortunately the mechanism got stuck and the balcony didnt flip over and he was forced to improvise. He just climbed down and performed infront of the wall since there was nothing else to do.
+
+                    No one of the responsibles lashed out on us though they just shrug it off and said things like these happen unfortunaly. At the end of the 2-3 days building up the stage and ripping it apart again one of the tour workers gave me a part of the wall that fell of and thanked me for working with them. He geniuly was a great guy and it was a pleasure working with him.
+                </p>
+
+                <h2>Wörk</h2>
+                <p>
+                    Now at this time of my life everything was alright and working out somehow. But I still felt I was missing something namely programming So I applied to various web dev companies within my area.
+
+                    Surprisingly enough, I found something pretty fast. This time I started working for a company named Open New Media GmbH in Koblenz where I am still at. I can not express in words how grateful I was for this chance.
+
+                    Of course it took some time until I got back into webdev. There has been so much change and new stuff. Things like responsive design the js boom, html5, css3, etc. was all new and exciting so ofcourse I acrifice a lot of free time to get back on a professionel level.
+                    But I could not be happier webdev defenetiv is what I always wanted to do and it is extremely rewarding to work in this field.
+                </p>
+
+                <h2>Fun</h2>
+                <p>
+                    I obviously enjoy programming but I also like to read Books, play video games and watch movies. My most favorite book is cloud atlas which happens to be the book I'am currently reading. I'm not that fast of a book reader since I sadly rarely ever get to have some time left. I am close to finishing it though. My favorite movie of all time is Pulp fiction which I must've watched 10 times by now.
+                </p>
+                <div class="img-inline-desc">
+                    <div class="mask"> 
+                        <h2>Grafiti in Chefalu</h2> 
+                        <p>This picture was taken in Chefalu Italy on a vacation. Me and a group of friends took a unconventional path to one of this towns sight seeing places and stumbled uppon some grafitis.</p> 
+                    </div>  
+                    <img class="img-responsive" src="<?php echo $this->basePath(); ?>/img/chefalu.jpg" alt="just me infront of a grafiti wall wearing questionable headwear" />
+                </div>          
+            </div>
+        </div>
+    </div>
+</section>

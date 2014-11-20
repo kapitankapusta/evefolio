@@ -1,0 +1,245 @@
+#news_box {
+    background-color: @brand-primary;
+    position: relative;
+    // min height needed for the background icon not to overlap
+    min-height: 500px;
+
+    .overlay {
+        #gradient > .vertical(@start-color: transparent; @end-color: rgba(0, 0, 80, 0.6));
+        width: 100%;
+        // min height needed for the background icon not to overlap
+        min-height: 500px;
+        padding: 50px 0px;
+        position: relative;
+    }
+
+    .background-icon {
+        color: #000;
+        .hidden-xs();
+        opacity: 0.8;
+    }
+
+    #news_container {
+        // v-align and other relative dependet stuff need this
+        position: relative;
+
+        .inner {
+            vertical-align: middle;
+            border: 1px solid #fff;
+            .border-top-radius(@border-radius-base);
+
+            .news-heading {
+                font-size: 18px;
+                padding: @padding-base-vertical @padding-base-horizontal;
+                margin: 0;
+                color: #fff;
+                border-bottom: 1px solid #fff;
+
+                figure {
+                    height: 10px;
+                    width: 10px;
+                    background-color: #fff;
+                    margin: 5px;
+                    border-radius: @border-radius-base;
+                    z-index: 2;
+
+                    &:hover {
+                        border: 1px solid @gray;
+                    }
+                }
+
+                .active {
+                    background-color: @gray;
+                    border: 1px solid #fff;
+                }
+            }
+
+            .actual-news {
+                // color: #fff;
+                // background-color: rgba(0, 0, 0, .15); not set on this yet
+                .category-item {
+                    position: absolute;
+                    right: 30px;
+                    top: 30px;
+                    font-size: 30px;
+                }
+
+                .creation-date {
+                    position: absolute;
+                    font-size: @font-size-small;
+                    color: lighten(@gray-light, 10%);
+                }
+
+                .news-entry {
+                    padding: @padding-large-vertical @padding-large-horizontal;
+                    background-color: #fff;
+
+                    h3 {
+                        font-weight: bold;
+                        color: @brand-primary;
+                    }
+                }
+
+                .list-group {
+                    margin-bottom: 0;
+
+                    .list-group-item {
+                        color: #fff;
+                        border-bottom: 1px solid #fff;
+
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.background-icon {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    font-size: 100px;
+}
+
+#portraits_container {
+    height: 0px;
+    position: relative;
+    -webkit-animation: portrait-top-slide 0.5s forwards;
+    -webkit-animation-delay: 0.5s;
+    animation: portrait-top-slide 0.5s forwards;
+    animation-delay: 0.5s;
+
+    .icon {
+        position: absolute;
+        z-index: 3;
+        bottom: -10px;
+        font-size: 70px;
+        left: ~"calc(50% - 40px)";
+        opacity: 0;
+        -webkit-animation: icon-fade-in 0.5s forwards;
+        -webkit-animation-delay: 0.5s;
+        animation: icon-fade-in 0.5s forwards;
+        animation-delay: 0.5s;
+    }
+
+    #portraits_box {
+        position: absolute;
+        height: 90%;
+        width: 90%;
+        background-color: #fff;
+        top: 0;
+
+        .content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+            background-color: @brand-primary;
+            #gradient > .vertical(@start-color: transparent; @end-color: rgba(0, 0, 80, 0.6));
+            box-shadow: inset 0px 3px 1px 1px rgba(0, 0, 0, .7);
+
+            h2 {
+                color: #fff;
+                text-align: center;
+            }
+
+            .table {
+                width: 80%;
+                margin: 0 auto;
+
+                td {
+                    font-size: @font-size-small;
+                    color: #fff;
+                }
+            }
+
+            h2, .table {
+                opacity: 0;
+                -webkit-animation: fade-in 0.5s forwards;
+                -webkit-animation-delay: 0.5s;
+                animation: fade-in 0.5s forwards;
+                animation-delay: 0.5s;
+            }
+
+            .img-border {
+                opacity: 0;
+                margin: 25px 0;
+                -webkit-animation: fade-in 0.5s forwards;
+                -webkit-animation-delay: 0.5s;
+                animation: fade-in 0.5s forwards;
+                animation-delay: 0.5s;
+
+                .portrait {
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    border: 2px groove #fff;
+                    box-shadow: 1px 1px 1px 1px;
+                    height: 100px;
+                    width: 100px;
+                    background-image: url('../img/astro.png');
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+
+    #portraits_footer {
+        position: absolute;
+        background: #fff;
+        width: 100%;
+        height: 100px;
+        border-radius: 50%;    /* Makes the element circular */
+        bottom: -50px;
+        background-color: @brand-primary;
+        #gradient > .vertical(rgba(0, 0, 80, 0.6); rgba(0, 0, 80, 0.6));
+        box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, .8);
+    } 
+}
+
+.timeline-box {
+    padding-top: 15px;
+
+    .box {
+        .border-top-radius(@border-radius-base);
+        display: inline-block;
+        border: 1px solid @brand-primary;
+        text-decoration: none;
+
+        h3 {
+            margin: 0;
+            padding: @padding-base-vertical @padding-base-horizontal;
+            color: #fff;
+            background-color: @brand-primary;
+        }
+
+        p {
+            padding: @padding-base-vertical @padding-base-horizontal;
+        }
+    }
+}
+
+#vita_desc_box {
+    border: 1px solid #fff;
+    .border-top-radius(@border-radius-base);
+
+    h2 {
+        margin: 0;
+        font-size: 18px;
+        border-bottom: 1px solid #fff;
+        padding: @padding-base-vertical, @padding-base-horizontal;
+    }
+
+    p {
+        background-color: #fff;
+        margin: 0;
+        padding: @padding-base-vertical, @padding-base-horizontal;
+    }
+}
+            
